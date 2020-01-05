@@ -1,2 +1,2 @@
 # Weather-Station
-This is the source code, design diagrams, and project notes for a small weather station. 
+This repositiory contains the source code, design diagrams, and project notes for a small weather station. 
