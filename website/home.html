@@ -1,0 +1,68 @@
+			<!--
+				Item:
+				Description: 
+			-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WeatherBoi 9000</title>
+		<link rel="stylesheet" type="text/css" href="home.css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body>
+
+		<!-- 
+			Item: Navigation bar
+			Description: primary navigation bar for the website. remains stationairy with the background as the user scrolls. allighed on the left hand side of the webpage.
+		-->
+
+		<nav>
+			<ul name="navigation-bar" id='navigation-bar'>
+				<li name='current-conditions-navigation-link' id='navigation-link'><a href="">Current Conditions</a></li>
+				<li name='forecast-navigation-link' id='navigation-link'><a href="">Forecast</a></li>
+				<li name='historical-data-navigation-link' id='navigation-link'><a href="">Historical Data</a></li>
+				<li name='station-location-navigation-link' id='navigation-link'><a href="">Station Map</a></li>
+				<li name='about-navigation-link' id='navigation-link'><a href="">About</a></li>
+			</ul>
+		</nav>
+
+		<!-- 
+			Item: landing page header
+			Description:    header for the current conditions page. The first heading the user sees when the website is launched
+		-->
+		<header name="current-conditions-header" id='header'>
+			<h1 name="current-conditions-heading" id='heading'>Current Conditions</h1>
+		</header>
+
+
+			<!--
+				Item: current Condions main section
+				Description: main container for current conditions section. composed of articles with temperature, pressure, and humiditity data. 
+			-->
+		<main name="current-conditions-main-container" id='main-container'>
+			<!-- Temperature Section -->
+			<section name='temperature-section' id='section-measurement-container'>
+				<h3 name='temperature-label-heading' id='measurement-heading'>Temperature(k)</h3>
+				<h1 name='temperature-data-heading' id='measurement-data'>#####</h1>
+			</section>
+			<br>
+
+			<!-- Pressure Section -->
+			<section name='pressure-section' id='section-measurement-container'>
+				<h3 name='pressure-label-heading' id='measurement-heading'>Pressure(atm)</h3>
+				<h1 name='pressure-data-heading' id='measurement-data'>#####</h1>
+			</section>
+			<br>
+
+			<!-- Humidity Section -->
+			<section name='humidity-section' id='section-measurement-container'>
+				<h3 name='humidity-label-heading' id='measurement-heading'>Humiditiy(%)</h3>
+				<h1 name='humidity-data-heading' id='measurement-data'>#####</h1>
+			</section>
+		</main>
+
+	</body>
+</html>
