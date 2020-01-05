@@ -1,7 +1,7 @@
 import socket
 
 def Main():
-    host = '127.0.0.1'  #Set Host as this machine (127.0.0.1)
+    host = '192.168.1.14'  #Set Host as this machine (127.0.0.1)
     port = 5000 # sets port as 5000
 
     s = socket.socket() # Create Socket object
