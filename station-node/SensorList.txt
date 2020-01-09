@@ -1,0 +1,5 @@
+List of sensors used in project
+
+Temperature / Humidity Sensor Module --- DHT11 Digitial Temperature sensor
+
+Barometric Pressure Sensor --- BMP180 Digital Barometric Pressure Sensor Board Module
