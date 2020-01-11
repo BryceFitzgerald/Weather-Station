@@ -1,49 +1,28 @@
+import Sensor
 
+import datetime
 
 class Measurement:
-    def __init__(self, tempMeasurement, pressureMeassurement, humidMeasurement, logDate, tempSensor, pressureSensor, humidSensor):
-        # Measurement Values
-        self.tempMeasurement = tempMeasurement
-        self.pressureMeassurement = pressureMeassuremen
 
+    # instantiation Method: Reqiures temperatureSensor and PressureSensor Objects
+    def __init__(self, tempSensor, pressureSensor):
         # Date and time of measurement
-        self.logDate = logDate
+        self.logDate = datetime.datetime.now()
 
         # Sensor objects
         self.tempSensor = tempSensor
         self.pressureSensor = pressureSensor
+        
+        # Measurement Value Varaibles
+        self.tempMeasurement = tempSensor.getMeasurement()
+        self.pressureMeassurement = pressureSensor.getMeasurement()
 
-    def getTempMeasurement(self):
-    	return self.tempMeasurement
-
-    def getPressureMeasurement(self):
-        return self.pressureMeassurement
-
-    def getHumidMeasurement(self):
-        return self.humidMeasurement
-
-    def getLogDate(self):
-        return logDate
-
-    def setTempMeasurement(self,tempMeasurement):
-    	self.tempMeasurement = tempMeasurement
-
-    def setPressureMeasurement(self, pressureMeassurement):
-        self.pressureMeassurement = pressureMeassurement
-
-    def getPressureSensorAddress(self):
-        return self.pressureSensor.getAddress()
-
-    def getTemperatureSensorAddress(self):
-        return self.tempSensor.getAddress()
-
-    def setSensorAddress(self, sensor):
-        self.tempSensor = sensor
-
-    def setPressureSensor(self, sensor):
-        self.pressureSensor = pressureSensor
+        # Sensor ID's
+        self.temperatureSensorAddress = tempSensor.sensorAddress
+        self.pressureSensorAddress = pressureSensor.sensorAddress
     
 
-    def toString(self):
-    	returnString = "Recorded: " + str(getLogDate) +"\nTemperature: " + str(tempMeasurement) + "\nPressure: " + str(pressureMeassurement) +"\n"
-    	returnString += "Temp Address: " + tempSensor.getAddress() + "\nPressure Address: " + tempSensor.getAddress()
+    def __str__(self):
+        returnString = "Recorded: " + str(self.logDate) +"\nTemperature: " + str(self.pressureMeassurement) + "\nPressure: " + str(self.pressureMeassurement) +"\n"
+        returnString += "Temp Address: " + self.pressureSensorAddress + "\nPressure Address: " + self.temperatureSensorAddress
+        return returnString

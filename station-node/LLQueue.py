@@ -1,34 +1,36 @@
 import LLNode
-class MeasurementQueue:
+class LLQueue:
 
 	# template for Measurement Queue provided by Geeks for geeks
 	# original source code: https://www.geeksforgeeks.org/queue-linked-list-implementation/
     def __init__(self):
-        self._front = None
-        self._back = None
-        self._length = 0
+        self.front = None
+        self.back = None
+        self.length = 0
 
     # if queue is empty, return true
     def isEmpty(self):
-        return self._front == None
+        return self.front == None
     
     # increment length variable 
     def increment(self):
-    	self._length += 1
+    	self.length += 1
     
     # decrement length variable
     def decrement(self):
-        self._length -= 1
+        self.length -= 1
 
     # add item to the queue
     def EnQueue(self, item):
-        temp = LLNode(item)
+        temp = LLNode.LLNode(item)
 
-        if self.rear == None:
+        if self.back == None:
             self.front = temp
-            self.rear = temp
-        increment()
+            self.back = temp
 
+        self.increment()
+        self.back.next = temp
+        self.back = temp
     # remove item to the queue
     def DeQueue(self):
         # if the queue is empty, return 
@@ -40,17 +42,17 @@ class MeasurementQueue:
         # set front to next
         self.front = temp.next
 
-        # if front is empty, set rear to empty
+        # if front is empty, set back to empty
         if(self.front == None):
-            self.rear = None
+            self.back = None
             # set length variable to 1 (later to be transformed to 0)
-            self._length = 1
+            self.length = 1
 
         # decrement length variable
-        decrement()
+        self.decrement()
        
         # return measurement
-        return temp.getData()
+        return temp.data
 
     
 

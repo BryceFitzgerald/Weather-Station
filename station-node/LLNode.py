@@ -1,19 +1,7 @@
 
 
 class LLNode:
-    def __init__(self, next=None, data):
-        self.next = next
+    def __init__(self, data):
+        self.next = None
         self.data = data
-
-    def setNext(self, next):
-        self.next = next
-
-    def getNext(self):
-        return self.next
-    
-    def setData(self, data):
-        self.data = data
-
-    def getData(self):
-        return data
 
