@@ -1,10 +1,10 @@
 # import Sensor Superclass
-import Sensor
+import sensor
 
 # import abstract class libraries (ABC = abstact parent class, abstractmethod = method decorator)
 from abc import ABC, abstractmethod
 
-class PressureSensor(Sensor.Sensor):
+class pressureSensor(sensor.sensor):
     def __init__(self, sensorAddress, gpio):
     	# variable are hidden for security reasons
         self._sensorType = "PRES"

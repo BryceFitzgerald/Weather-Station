@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 
 # Abstract Sensor Class
-class Sensor(ABC):
+class sensor(ABC):
 
     # getMeasurement; abstract method: returns measurement
     def getMeasurement(self):

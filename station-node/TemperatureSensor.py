@@ -1,10 +1,10 @@
 # import sensor object
-import Sensor
+import sensor
 
 # import abstract class libraries (ABC = abstact parent class, abstractmethod = method decorator)
 from abc import ABC, abstractmethod
 
-class TemperatureSensor(Sensor.Sensor):
+class temperatureSensor(sensor.sensor):
     def __init__(self, sensorAddress, gpio):
         self._sensorType = "TEMP"
         self._sensorAddress = sensorAddress
